@@ -13,7 +13,7 @@ class Header extends Component {
 
     state = {
         keywords: '',
-    //    status: 'non-active'
+    
     }
 
     inputChangeHandler = (e) => {
@@ -39,22 +39,23 @@ class Header extends Component {
         }
            //  inside return
               <header style={styles.header}>
-              <div style={styles.logo}>Logo</div>
-        -------------------------------------------------
-        
-        if (this.state.keywords !== '') { style.background = 'blue' } else { style.background = 'green'; }
-     
+              <div style={styles.logo}>Logo</div> 
+        -------------------------------------------------*/
         const style = {
             backgroundImage: 'red'
         }
-         */
+       
 
-
-
+        
+       if (this.state.keywords !== '') 
+            { style.background = 'blue' } 
+       else 
+            { style.background = 'green'; } 
+        
 
         return (
-        
-        <header>
+        // first style mode
+        <header style={style}>
             <div className="logo">Logo</div>
             <input onChange={this.inputChangeHandler} type='text' />
         </header>
