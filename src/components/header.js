@@ -13,12 +13,13 @@ class Header extends Component {
 
     state = {
         keywords: '',
-        active: false
+        active: 'non-active'
     }
 
     inputChangeHandler = (e) => {
-        //detects if empty or not 
-      const val = e.target.value === '' ? false : true;
+        //detects if empty or not  
+        //this changes the class value
+      const val = e.target.value === '' ? 'non-active' : 'active';
        
         this.setState({  
             active: val,     
@@ -26,13 +27,12 @@ class Header extends Component {
     }
 
     render() {
-          /* Second pattern
-          using state active true/false to change background  colors when  
-          a character typed */
+          /* Third pattern
+          Adding  className  active/ non-active   */
         return (
      
 
-        <header  style={{background: `${this.state.active ? 'red' : 'blue'}`}} >
+        <header  className={this.state.active} >
             <div className="logo">Logo</div>
             <input onChange={this.inputChangeHandler} type='text' />
         </header>
