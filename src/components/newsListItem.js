@@ -4,25 +4,11 @@
  // we need to enable css module  
  // must change ReactApp configuration files
 
-
- /* Config steps for css modules 
-  stop dev server
-  run the:  script eject
-  look for /config/webpack.config.js file
-  search for kewords  /.\css$/  or  cssRegex
-  right under   importLoaders:1,   write the next
-       -    modules: true,
-       -    localIdentName:'[name]__[local]__[hash:base64:5]',
-     
-       import classVar from '/css/styles.css'
-       <div className={classVar.fondoEj}
- */
-
  const NewsListItem = ({ item }) => {
      
 
    return (
-     <div className={classes.news_item}>
+     <div className={classes.new_item}>
         <div>
             <h3> {item.title}</h3>
             <div>{item.feed}</div>
