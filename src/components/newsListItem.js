@@ -19,13 +19,12 @@
  */
 
  const NewsListItem = ({ item }) => {
-     
-
+     const {title, feed} = item;
    return (
      <div className={classes.news_item}>
         <div>
-            <h3> {item.title}</h3>
-            <div>{item.feed}</div>
+            <h3> {title}</h3>
+            <div>{feed}</div>
         </div>
      </div>
    )
