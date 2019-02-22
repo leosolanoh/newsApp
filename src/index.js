@@ -18,12 +18,10 @@ class App extends Component {
         return (<div>
                     <Header />
                     <Newslist news={this.state.news}>
-                        <h1>The news are:</h1>
-                 
+                        <h1>The news are:</h1>                 
                     </Newslist>
                 </div> 
                 )
-
     }
     
 }

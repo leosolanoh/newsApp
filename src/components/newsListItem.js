@@ -1,30 +1,17 @@
- import React from 'react'
- import { css }  from 'glamor';
- 
+ import React from 'react';
+ import classes  from '../css/styles.css';
+ // using css modules
+ // we need to enable css module  
+ // must change ReactApp configuration files
+
  const NewsListItem = ({ item }) => {
-
-   let  news_item = css({
-     padding:'20px',
-     boxSizing: 'border-box',
-     borderBottom: '1px solid grey',
-     ':hover':{color:'red'},
-     '@media(max-width:600px)':{
-       color:'blue'
-     }
-   })
-
-   let item_grey = css({
-     background: 'lightgrey'
-   })
-      
+     
 
    return (
-     //<div {...news_item} {...item_grey}>  other option  //
-
-     <div  >
-       <div  className={`${item_grey} ${news_item}`}>
-                <h3> {item.title}</h3>
-                <div>{item.feed}</div>
+     <div className={classes.new_item}>
+        <div>
+            <h3> {item.title}</h3>
+            <div>{item.feed}</div>
         </div>
      </div>
    )
