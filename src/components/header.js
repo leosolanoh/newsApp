@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './header.css'
- 
+//import './header.css'
+import classes from  '../css/styles.css';
 
 class Header extends Component {
 
@@ -21,8 +21,8 @@ class Header extends Component {
         return (
      
 
-        <header  >
-            <div className="logo">Logo</div>
+        <header  className={classes.logo}>
+            <div>Logo</div>
             <input onChange={this.inputChangeHandler} type='text' />
         </header>
         )
